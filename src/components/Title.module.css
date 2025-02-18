@@ -1,0 +1,43 @@
+:root {
+    --underline-footer-color: #A68C4C; 
+}
+
+/* TITULOS SERVIÇOS */
+
+.titleServices h1 {    
+    display: inline-block;
+    font-size: max(3rem, 5vw);
+    font-weight: 200;  
+    padding-bottom: 1rem;  
+    word-break: normal;
+    position: relative;
+}
+
+.titleServices h1::after {
+    content: '';
+    width: 60%;
+    height: 5px;
+    background-color: var(--underline-service-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* TITULOS FOOTER */
+
+.titleFooter h1 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.8rem;
+    position: relative;
+} 
+
+.titleFooter h1::after {
+    content: '';
+    width: 4rem;
+    height: 2px;
+    background-color: var(--underline-footer-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

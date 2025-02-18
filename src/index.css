@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+  font-family: "Helvetica W01 Light", sans-serif;
+}
+
+:root {
+  --color-dark-gray: #222;
+  --color-white: #ffffff;
+}
+
+body {
+  width: 100%;  
+  min-height: 100vh;    
+}
+
+#root {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #555; /* Cor do fundo da barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc; /* Cor do botão */
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888; /* Cor do botão ao passar o mouse */
+}

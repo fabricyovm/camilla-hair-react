@@ -1,0 +1,71 @@
+section.blog {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(3, minmax(15rem, 22rem));    
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 4rem 1rem;  
+    position: relative;  
+}
+
+.cardBlog {   
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cardBlog img {
+    width: 100%;
+}
+
+.cardBlog > div {
+    padding: 1rem;
+}
+
+.cardBlog > div > h1 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #636262;    
+}
+
+.cardBlog > div > p {
+    margin-bottom: 1rem;
+    color: #636262;    
+}
+
+.boxLearnMore {
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.learnMore {   
+    display: block; 
+    text-align: center;
+    width: 50%;
+    padding: 0.5rem 0;
+    border: 1px solid #7F6C4E ;
+    border-radius: 2rem;    
+    font-weight: bold;
+    color: #222;
+    margin: 0 auto;
+    background-color: #7F6C4E ;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.learnMore:hover {
+    background-color: #fff;  
+    color: #7F6C4E ;  
+}
+
+@media screen and (max-width: 768px) {
+    section.blog {
+        justify-content: center;
+        grid-template-columns: repeat(2, minmax(10rem, 22rem)); 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section.blog {
+        justify-content: center;
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}

@@ -1,0 +1,17 @@
+.header {
+    width: 100%;
+    height: 5.25rem;
+    background-color: #A48C52;
+    position: sticky; 
+    top: 0;
+    z-index: 999;       
+}
+
+.headerContent {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;     
+}

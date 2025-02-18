@@ -1,0 +1,22 @@
+.mySwiper {
+    width: 100%;
+}
+
+.imgDesktop,
+.imgMobile {
+    width: 100%;
+}
+
+.imgMobile {
+    display: none;
+}
+
+@media screen and (max-width: 762px) {
+    .imgDesktop {
+        display: none;
+    }
+
+    .imgMobile {
+        display: block;
+    }
+}

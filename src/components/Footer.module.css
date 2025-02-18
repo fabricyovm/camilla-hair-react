@@ -1,0 +1,119 @@
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+    justify-items: center;
+    gap: 2rem;
+    padding: 4rem 2rem;    
+    color: #222;
+    background-color: #E0E0E0;
+}
+
+.camilaSousa {
+    max-width: 25rem;
+}
+
+.camilaSousa > p {
+    margin-bottom: 1rem;
+}
+
+.camilaSousa .socialMedia {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.camilaSousa .socialMedia .socialMediaIcon {
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: #222;
+    border-radius: 50%;
+    color: #eee;
+}
+
+
+.services > p {
+    margin-bottom: 0.4rem;
+}
+
+.contact,
+.serviceHours {
+    max-width: 15rem;
+}
+
+.contact > p,
+.serviceHours > p {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;    
+}
+
+.contact .whatsapp,
+.contact .phone,
+.serviceHours .watch {
+    font-size: 1.2rem;
+}
+
+.serviceHours {
+    max-width: 15rem;
+}
+
+.footer .copyright {    
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    color: #222;
+    background-color: #ccc;
+    position: relative;
+}
+
+.footer .copyright a {
+    color: #3498db;
+}
+
+.footer .copyright a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1150px) {
+    .footer .container {
+        grid-template-columns: repeat(3, 1fr);    
+        justify-items: start;    
+        padding: 4rem 2rem;  
+        gap: 2rem;         
+    }
+
+    .footer .container .camilaSousa {
+        grid-column: 1 / -1;        
+        max-width: 40rem;       
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    .footer .container {
+        grid-template-columns: repeat(2, 1fr);       
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer .container {   
+        grid-template-columns: repeat(1, 1fr);   
+        gap: 4rem; 
+        padding: 4rem 1rem;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services > :first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (max-width: 268px) {
+    .services {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

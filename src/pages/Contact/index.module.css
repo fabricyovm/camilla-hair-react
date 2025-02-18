@@ -1,0 +1,123 @@
+.container {
+    width: 100%;     
+    display: flex;
+}
+
+.boxContact,
+.boxAbout {       
+    background-color: #eee; 
+    flex: 1;
+}
+
+.boxAbout {  
+    background: rgb(184, 73, 125);
+}
+
+.boxContact {
+    font-size: 1rem;
+}
+
+.boxContact h1 {
+    color: #8c1366;
+    font-size: 4rem;
+    font-weight: 300;
+    text-align: center;  
+    margin: 1rem 0; 
+}
+
+.boxContact ul {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.boxAbout .aboutContent {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.boxAbout .aboutContent > img {
+    display: block;
+    max-width: 14rem;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.boxAbout .aboutContent h1 {
+    text-align: center;
+    color: #eee;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    white-space: nowrap;
+}
+
+.boxAbout .aboutContent p.specialtiesText {
+    color: #eee;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 4rem;
+}
+
+.boxAbout .aboutContent p.followInstagram {
+    color: #eee;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 3rem;
+}
+
+.mediaSocial .boxIcon {
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 1rem auto;
+}
+
+.boxIcon > img {
+    display: block;
+    width: 3rem;
+    background-color: #eee;  
+}
+
+.mediaSocial > p {
+    text-align: center;
+    color: #eee;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+.mediaSocial p.instagram {  
+    max-width: 22rem;  
+    border-radius: 2rem;  
+    background-color: #eee;
+    padding: 0.5rem;    
+    font-size: 2rem;
+    color: #8c1366;
+    font-weight: bold;
+    margin: 0.5rem auto;  
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .boxContact ul {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .mediaSocial p.instagram {
+        font-size: 1.5rem;
+    }
+}
+
