@@ -22,22 +22,29 @@
     gap: 1rem;
 }
 
-.camilaSousa .socialMedia .socialMediaIcon {
-    font-size: 1.5rem;
-    padding: 1rem;
-    background-color: #222;
+.camilaSousa .socialMedia > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
+    background-color: #424242;
+    transition: transform 0.4s;
+}
+
+.camilaSousa .socialMedia > a:hover {
+    transform: scale(1.05);
+}
+
+.camilaSousa .socialMedia .socialMediaIcon { 
+    width: 50%;
+    height: 50%;    
     color: #eee;
 }
 
-
 .services > p {
     margin-bottom: 0.4rem;
-}
-
-.contact,
-.serviceHours {
-    max-width: 15rem;
 }
 
 .contact > p,
@@ -47,14 +54,11 @@
     margin-bottom: 1.5rem;    
 }
 
-.contact .whatsapp,
-.contact .phone,
-.serviceHours .watch {
+.iconFooter {
+    display: flex;
     font-size: 1.2rem;
-}
-
-.serviceHours {
-    max-width: 15rem;
+    flex-shrink: 0;
+    color: #222;
 }
 
 .footer .copyright {    

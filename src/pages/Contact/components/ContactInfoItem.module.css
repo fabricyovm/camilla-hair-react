@@ -14,20 +14,20 @@
 }
 
 .contactInfo .iconContact {
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
-.contactInfo > div {
+.contactInfo > .textContactInfo {
     display: flex;
     flex-direction: column;
 }
 
-.contactInfo > div > span:nth-child(1) {
+.contactInfo > .textContactInfo > span:nth-child(1) {
     font-weight: bold;
     font-size: 1.5em;    
 }
 
-.contactInfo > div > span:nth-child(2) {
+.contactInfo > .textContactInfo > span:nth-child(2) {
     font-size: 1.2em;
 }
 

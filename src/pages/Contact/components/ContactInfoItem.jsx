@@ -1,15 +1,11 @@
 import style from './ContactInfoItem.module.css';
 
-// Font Awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-
 const ContactInfoItem = ({ icon, title, text }) => {   
 
   return (
     <li className={style.contactInfo}>
-        <FontAwesomeIcon icon={icon} className={style.iconContact} />
-        <div>
+        <div className={style.iconContact}>{icon}</div>
+        <div className={style.textContactInfo}>
             <span>{title}</span>
             <span>{text}</span>
         </div>

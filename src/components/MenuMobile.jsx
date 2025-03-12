@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
-import HamburguerMenu from './HamburguerMenu';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse, faHandHoldingHeart, faPhoneFlip, faPumpSoap } from '@fortawesome/free-solid-svg-icons'
-import style from './MenuMobile.module.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaHouse } from "react-icons/fa6";
+import { FaHandHoldingHeart, FaPumpSoap, FaPhoneAlt } from "react-icons/fa";
+import HamburguerMenu from './HamburguerMenu';
+import style from './MenuMobile.module.css';
 
 const MenuMobile = () => {
 
@@ -20,26 +20,26 @@ const MenuMobile = () => {
                 <ul>          
                     <li>
                         <Link to="/">
-                            <FontAwesomeIcon icon={faHouse} className={style.icon} />
-                            Início
+                            <FaHouse className={style.icon} />
+                            <span>Início</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/services">
-                            <FontAwesomeIcon icon={faHandHoldingHeart} className={style.icon} />
-                            Serviços
+                            <FaHandHoldingHeart className={style.icon} />
+                            <span>Serviços</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/products">
-                            <FontAwesomeIcon icon={faPumpSoap} className={style.icon} />
-                            Produtos
+                            <FaPumpSoap  className={style.icon} />
+                            <span>Produtos</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/contact">
-                            <FontAwesomeIcon icon={faPhoneFlip} className={style.icon} />
-                            Contato
+                            <FaPhoneAlt className={style.icon} />
+                            <span>Contato</span>
                         </Link>
                     </li>
                 </ul>

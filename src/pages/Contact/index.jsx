@@ -1,38 +1,36 @@
 import ContactInfoItem from './components/ContactInfoItem';
 import style from './index.module.css';
 import ProfilePicture from '../../assets/profile-picture.jpeg';
+import { FaUser } from "react-icons/fa";
 import InstagramIcon from '../../assets/instagram-icon.svg';
 import openWhatsapp from '../../utils/openWhatsapp';
-
-// Font Awesome
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faSquarePhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import { faClock } from '@fortawesome/free-regular-svg-icons';
 import ButtonWhatsapp from '../../components/ButtonWhatsapp';
+import { FaLocationDot } from "react-icons/fa6";
+import { FaWhatsapp, FaRegClock, FaPhoneAlt } from "react-icons/fa";
 
 const Contact = () => {
     const contactInfo = [
       {
         id: 1,
-        icon: faWhatsapp,
+        icon: <FaWhatsapp />,
         title: "WhatsApp",
         text: "(51) 99408-2005"
       },
       {
         id: 2,
-        icon: faSquarePhone,
+        icon: <FaPhoneAlt />,
         title: "Telefone",
         text: "(51) 99408-2005"
       },
       {
         id: 3,
-        icon: faClock,
+        icon: <FaRegClock />,
         title: "Atendimento",
         text: "Terça-feira a sábado, das 10h às 19h"
       },
       {
         id: 4,
-        icon: faLocationDot,
+        icon: <FaLocationDot />,
         title: "Endereço",
         text: "R. Dr. Armando Barbedo, 526 - loja 01 - Tristeza, Porto Alegre"
       },
@@ -58,7 +56,10 @@ const Contact = () => {
 
         <div className={style.boxAbout}>
             <div className={style.aboutContent}>
-                <img src={ProfilePicture} alt="Foto da profissional Camila Sousa" />
+                {/* <img src={ProfilePicture} alt="Foto da profissional" /> */}
+                <div className={style.tempProfilePicture}>
+                  <FaUser className={style.tempIconProfilePicture} />
+                </div>
                 <h1>Camila Sousa</h1>
                 <p className={style.specialtiesText}>Especialista em mechas, coloração, corte e química capilar</p>
                 <a href="https://www.instagram.com/camilla.santoshair" target="_blank">              

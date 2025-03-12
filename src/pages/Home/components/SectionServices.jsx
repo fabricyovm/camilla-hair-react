@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { FaWhatsapp } from "react-icons/fa";
 import openWhatsapp from '../../../utils/openWhatsapp';
 import style from './SectionServices.module.css';
 
@@ -35,7 +34,6 @@ const SectionServices = () => {
     const [slidesPerView, setSlidesPerView] = useState(4);
     const [delayAutoplay, setDelayAutoplay] = useState(3000)
     const styleSwiper = {
-        '--swiper-navigation-color': '#fff',
         '--swiper-navigation-color': '#fff',
         '--swiper-pagination-color': '#000',
         '--swiper-pagination-bottom': '0px',
@@ -148,8 +146,8 @@ const SectionServices = () => {
             </Swiper>
             <div className={style.boxButtons}>
                 <button className={style.btnOpenWhatsapp} onClick={openWhatsapp}>
-                    <FontAwesomeIcon icon={faWhatsapp} className={style.btnIcon} />
-                    AGENDAR AGORA
+                    <FaWhatsapp className={style.btnIcon} />
+                    <span>AGENDAR AGORA</span>
                 </button>
                 <Link to="/services">
                     <button className={style.btnMoreServices}>VER SERVIÇOS</button>

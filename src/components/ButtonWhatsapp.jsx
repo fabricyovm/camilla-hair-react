@@ -1,6 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import style from './ButtonWhatsapp.module.css';
+import { FaWhatsapp } from "react-icons/fa";
 
 const ButtonWhatsapp = ({ text, action, position }) => {
     
@@ -13,7 +12,7 @@ const ButtonWhatsapp = ({ text, action, position }) => {
     return (
         <div className={`${style.btnOpenWhatsapp} ${style[btnPosition]}`}>
             <button onClick={handleAction}>
-                <FontAwesomeIcon icon={faWhatsapp} className={style.btnIcon} />
+                <FaWhatsapp className={style.btnIcon} />
                 {text}
             </button>
         </div>

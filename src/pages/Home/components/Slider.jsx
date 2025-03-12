@@ -32,7 +32,6 @@ const Slider = () => {
 
     const styleSwiper = {
         '--swiper-navigation-color': '#fff',
-        '--swiper-navigation-color': '#fff',
         '--swiper-pagination-color': '#000',
         '--swiper-pagination-bottom': '10px',
         '--swiper-pagination-bullet-size': '10px',
