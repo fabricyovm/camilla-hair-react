@@ -1,17 +1,40 @@
-.header {
-    width: 100%;
-    height: 5.25rem;
-    background-color: #A48C52;
-    position: sticky; 
-    top: 0;
-    z-index: 999;       
+.header {  
+    background-color: #000;
 }
 
 .headerContent {
-    width: 90%;
-    height: 100%;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.navList {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;     
+    justify-content: center;
+    gap: 60px;
+    list-style: none;   
+    user-select: none;
+}
+
+.itemList {
+    padding: 10px;
+    font-size: 22px;    
+    border-radius: 20px 0 20px 0;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.linkList {
+    color: #8f8f8f;
+}
+
+.itemList:hover {
+    background-color: #b49759;
+}
+
+.itemList:hover .linkList {
+    color: #fff;
+}
+
+.linkList.activePage {
+    color: #fff;
 }

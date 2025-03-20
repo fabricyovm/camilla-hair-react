@@ -22,7 +22,7 @@ const SectionDifferentials = () => {
 
     return (
         <section className={style.differentials}>
-            <div className={style.container}>
+            <div className={`container ${style.differentialsContent}`}>
                 {infoCards.map(card => (
                     <div key={card.id} className={style.card}>
                         <h2>{card.title}</h2>

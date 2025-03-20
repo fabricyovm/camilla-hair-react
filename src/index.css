@@ -2,17 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;  
-  font-family: "Helvetica W01 Light", sans-serif;
-}
-
-:root {
-  --color-dark-gray: #222;
-  --color-white: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   width: 100%;  
-  min-height: 100vh;    
+  min-height: 100vh;   
+  background-color: #eee; 
 }
 
 #root {
@@ -28,18 +24,24 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 6px; /* Largura da barra de rolagem */
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #555; /* Cor do fundo da barra */
+  background: #222; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ccc; /* Cor do botão */
+  background: #b49759;
   border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #888; /* Cor do botão ao passar o mouse */
+  background: #8d7645;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
 }

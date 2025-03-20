@@ -1,10 +1,22 @@
 import style from './Title.module.css';
 
-const Title = ({ title, titleClassName }) => {
+const Title = ({ 
+  title, 
+  fontSize = '1.5rem', 
+  color = '#b49759',
+  marginBottom = '0',
+ }) => {
+
+  const titleStyle = {
+      color,
+      fontSize,
+      marginBottom,
+  }
+
   return (
-    <div className={style[titleClassName]}>
-        <h1>{title}</h1>
-    </div>
+      <h1 className={style.title} style={titleStyle}>
+        {title}
+      </h1>
   )
 }
 

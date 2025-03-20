@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { FaWhatsapp } from "react-icons/fa";
+import Title from '../../../components/Title';
 import openWhatsapp from '../../../utils/openWhatsapp';
 import style from './SectionServices.module.css';
 
@@ -94,7 +95,7 @@ const SectionServices = () => {
     useEffect(() => {
         function handleResize() {
             if (window.innerWidth >= 1024) {
-                setSlidesPerView(4);            
+                setSlidesPerView(4);
             } else if (window.innerWidth >= 768) {
                 setSlidesPerView(3);
             } else if (window.innerWidth >= 480) {
@@ -120,38 +121,40 @@ const SectionServices = () => {
 
     return (
         <section className={style.services}>
-            <h1>SERVIÇOS</h1>
-            <Swiper
-                style={{ ...styleSwiper }}
-                modules={[Navigation, Pagination, Autoplay]}
-                spaceBetween={30}
-                slidesPerView={slidesPerView}
-                autoplay={{
-                    delay: delayAutoplay,  
-                    disableOnInteraction: false,  
-                }}
-                pagination={{ clickable: true }}
-                navigation={true}
-                className={style.mySwiper}
-            >
-                {infoCard.map(card => (
-                    <SwiperSlide key={card.id}>
-                        <div key={card.id} className={style.card}>
-                            <img src={card.imgDesktop} className={style.imgDesktop} />
-                            <img src={card.imgMobile} className={style.imgMobile} />
-                            <p>{card.title}</p>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-            <div className={style.boxButtons}>
-                <button className={style.btnOpenWhatsapp} onClick={openWhatsapp}>
-                    <FaWhatsapp className={style.btnIcon} />
-                    <span>AGENDAR AGORA</span>
-                </button>
-                <Link to="/services">
-                    <button className={style.btnMoreServices}>VER SERVIÇOS</button>
-                </Link>
+            <div className={`container ${style.servicesContent}`}>
+                <Title title="Serviços" fontSize='4rem' marginBottom='4rem' />
+                <Swiper
+                    style={{ ...styleSwiper }}
+                    modules={[Navigation, Pagination, Autoplay]}
+                    spaceBetween={30}
+                    slidesPerView={slidesPerView}
+                    autoplay={{
+                        delay: delayAutoplay,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{ clickable: true }}
+                    navigation={true}
+                    id={style.mySwiper}
+                >
+                    {infoCard.map(card => (
+                        <SwiperSlide key={card.id}>
+                            <div key={card.id} className={style.card}>
+                                <img src={card.imgDesktop} className={style.imgDesktop} />
+                                <img src={card.imgMobile} className={style.imgMobile} />
+                                <p>{card.title}</p>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                <div className={style.boxButtons}>
+                    <button className={style.btnOpenWhatsapp} onClick={openWhatsapp}>
+                        <FaWhatsapp className={style.btnIcon} />
+                        <span>AGENDAR AGORA</span>
+                    </button>
+                    <Link to="/services">
+                        <button className={style.btnMoreServices}>VER SERVIÇOS</button>
+                    </Link>
+                </div>
             </div>
         </section>
     )

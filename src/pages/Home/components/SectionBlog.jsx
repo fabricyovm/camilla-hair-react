@@ -12,7 +12,7 @@ const SectionBlog = () => {
         {
             id: 1,
             img: TesteDeMechas,
-            title: "TESTE DE MECHA: Porque ele é fundamental",            
+            title: "TESTE DE MECHA: Porque ele é fundamental",
             description: "O teste de mecha é essencial antes de qualquer procedimento químico. Ele ajuda a identificar reações indesejadas e garante que o cabelo esteja preparado para a transformação, evitando danos e garantindo o melhor resultado!"
         },
         {
@@ -33,18 +33,20 @@ const SectionBlog = () => {
 
     return (
         <section className={style.blog}>
-            {infoCards.map((item) => (
-                <div key={item.id} className={style.cardBlog}>
-                    <img src={item.img} />
-                    <div>
-                        <h1>{item.title}</h1>
-                        <p>{item.description}</p>
-                        <div className={style.boxLearnMore}>
-                            <Link to="/blog/teste-de-mecha" className={style.learnMore}>Saber mais</Link>
-                        </div>                        
+            <div className={`container ${style.blogContent}`}>
+                {infoCards.map((item) => (
+                    <div key={item.id} className={style.cardBlog}>
+                        <img src={item.img} />
+                        <div>
+                            <h1>{item.title}</h1>
+                            <p>{item.description}</p>
+                            <div className={style.boxLearnMore}>
+                                <Link to="/blog/teste-de-mecha" className={style.learnMore}>Saber mais</Link>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </section>
     )
 }

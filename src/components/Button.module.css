@@ -1,0 +1,24 @@
+.defaultButton {
+    width: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    gap: 0.5rem;   
+    font-size: 1.2rem;  
+    padding: 1rem 2rem;       
+    border-radius: 0.5rem;
+    cursor: pointer;  
+    box-shadow: -4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.2s;
+}
+
+.btnIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnIcon > * {
+    width: 2rem;
+    height: 2rem;
+}

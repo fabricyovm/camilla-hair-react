@@ -1,14 +1,17 @@
-section.blog {
-    display: grid;
-    justify-content: space-around;
-    grid-template-columns: repeat(3, minmax(15rem, 22rem));    
-    gap: 2rem;
-    margin-top: 2rem;
-    padding: 4rem 1rem;  
+ section.blog {
+    margin: 4rem 0;
+}
+
+.blogContent {
+    display: flex;    
+    justify-content: space-between;  
+    flex-wrap: wrap;     
+    gap: 2rem;       
     position: relative;  
 }
 
 .cardBlog {   
+    max-width: 20rem;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -56,16 +59,18 @@ section.blog {
     color: #7F6C4E ;  
 }
 
-@media screen and (max-width: 768px) {
-    section.blog {
-        justify-content: center;
-        grid-template-columns: repeat(2, minmax(10rem, 22rem)); 
+@media screen and (max-width: 1124px) {
+    .blogContent {
+        justify-content: center;        
     }
 }
 
 @media screen and (max-width: 480px) {
-    section.blog {
-        justify-content: center;
-        grid-template-columns: repeat(1, 1fr); 
+    .blogContent {
+        gap: 2rem;
+    }
+
+    .cardBlog {
+        max-width: 100%;
     }
 }

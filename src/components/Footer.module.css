@@ -1,11 +1,14 @@
-.footer .container {
+.footer {
+    background-color: #000;
+}
+
+.footerContent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);   
     justify-items: center;
     gap: 2rem;
-    padding: 4rem 2rem;    
-    color: #222;
-    background-color: #E0E0E0;
+    padding: 4rem 0;    
+    color: #eee;
 }
 
 .camilaSousa {
@@ -58,15 +61,14 @@
     display: flex;
     font-size: 1.2rem;
     flex-shrink: 0;
-    color: #222;
+    color: #eee;
 }
 
 .footer .copyright {    
-    width: 100%;
     padding: 1rem;
     text-align: center;
-    color: #222;
-    background-color: #ccc;
+    color: #8f8f8f;
+    background-color: #050505;
     position: relative;
 }
 
@@ -79,30 +81,30 @@
 }
 
 @media screen and (max-width: 1150px) {
-    .footer .container {
+    .footer .footerContent {
         grid-template-columns: repeat(3, 1fr);    
         justify-items: start;    
         padding: 4rem 2rem;  
         gap: 2rem;         
     }
 
-    .footer .container .camilaSousa {
+    .footer .footerContent .camilaSousa {
         grid-column: 1 / -1;        
         max-width: 40rem;       
     } 
 }
 
 @media screen and (max-width: 768px) {
-    .footer .container {
+    .footer .footerContent {
         grid-template-columns: repeat(2, 1fr);       
     }
 }
 
 @media screen and (max-width: 480px) {
-    .footer .container {   
+    .footer .footerContent {   
         grid-template-columns: repeat(1, 1fr);   
         gap: 4rem; 
-        padding: 4rem 1rem;
+        padding: 4rem 0;
     }
 
     .services {

@@ -1,31 +1,47 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import Logo from '../components/Logo'
 import style from './Header.module.css';
-import MenuDesktop from './MenuDesktop';
-import MenuMobile from './MenuMobile';
-import Logo from './Logo';
 
 const Header = () => {
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1000);
+    const { pathname } = useLocation();
+    const navElements = [
+        {
+            path: '/',
+            pageName: 'Home'
+        },
+        {
+            path: '/services',
+            pageName: 'Serviços'
+        },
+        {
+            path: '/products',
+            pageName: 'Produtos'
+        },
+        {
+            path: '/contact',
+            pageName: 'Contato'
+        },
+    ]
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth > 1000);
-        }
-
-        window.addEventListener('resize', handleResize);
-
-        return () => window.removeEventListener('resize', handleResize)
-
-    }, []);
+    const isActivePage = (path) => (pathname === path ? style.activePage : "")
 
     return (
         <header className={style.header}>
-            <div className={style.headerContent}>
+            <div className={`container ${style.headerContent}`}>
                 <Link to="/">
-                    <Logo color="#fff" />                    
+                    <Logo />
                 </Link>
-                {isDesktop ? <MenuDesktop /> : <MenuMobile />}
+                <nav className={style.nav}>
+                    <ul className={style.navList}>
+                        {navElements.map(element => (
+                            <li key={element.path} className={style.itemList}>
+                                <Link to={element.path} className={`${style.linkList} ${isActivePage(element.path)}`}>
+                                    {element.pageName}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
             </div>
         </header>
     )
