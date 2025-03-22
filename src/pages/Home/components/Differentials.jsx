@@ -1,6 +1,6 @@
-import style from './SectionDifferentials.module.css';
+import style from './Differentials.module.css';
 
-const SectionDifferentials = () => {
+const Differentials = () => {
 
     const infoCards = [
         {
@@ -34,4 +34,4 @@ const SectionDifferentials = () => {
     )
 }
 
-export default SectionDifferentials
+export default Differentials

@@ -50,10 +50,9 @@ const Slider = () => {
             className={style.mySwiper}
         >
             {contentSlides.map((slide) => (
-                <SwiperSlide>
+                <SwiperSlide key={slide.id}>
                     <div className={style.containerSlider}>
-                        <Slide
-                            key={slide.id}
+                        <Slide                            
                             backgroundImage={slide.background}
                             title={slide.title}
                             subTitle={slide.subTitle}

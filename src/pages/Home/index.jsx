@@ -1,7 +1,8 @@
 import Slider from './components/Slider';
-import SectionServices from './components/SectionServices';
-import SectionBlog from './components/SectionBlog';
-import SectionDifferentials from './components/SectionDifferentials';
+import Services from './components/Services';
+import Blog from './components/Blog';
+import Differentials from './components/Differentials';
+import ToTop from './components/ToTop';
 
 
 const Home = () => {
@@ -9,9 +10,10 @@ const Home = () => {
   return (
     <>
       <Slider />
-      <SectionServices />
-      <SectionDifferentials />
-      <SectionBlog />
+      <Services />
+      <Differentials />
+      <Blog />
+      <ToTop />
     </>
   )
 }

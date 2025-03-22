@@ -1,25 +1,14 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { FaWhatsapp } from "react-icons/fa";
 import Title from '../../../components/Title';
-import openWhatsapp from '../../../utils/openWhatsapp';
-import style from './SectionServices.module.css';
-
-// Imagens
+import style from './Services.module.css';
 import Corte from '../../../assets/service1.jpg';
 import Mechas from '../../../assets/service2.jpg';
 import Coloracao from '../../../assets/service3.jpg';
 import Escova from '../../../assets/service4.jpg';
 import Progressiva from '../../../assets/service5.jpg';
-import Alinhamento from '../../../assets/service6.jpg';
-import Botox from '../../../assets/service7.jpg';
-import Tratamento from '../../../assets/service8.jpg';
-import Luzes from '../../../assets/service9.jpg';
-import Selagem from '../../../assets/service10.jpg';
 
-const SectionServices = () => {
+
+const Services = () => {
     const contentCard = [
         {
             id: 1,
@@ -65,4 +54,4 @@ const SectionServices = () => {
     )
 }
 
-export default SectionServices
+export default Services

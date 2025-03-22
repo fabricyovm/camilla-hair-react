@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import style from './SectionBlog.module.css';
+import style from './Blog.module.css';
 
 // Imagens
 import TesteDeMechas from '../../../assets/testeDeMecha_blog.svg';
 import Corte from '../../../assets/corte_blog.svg';
 import Erros from '../../../assets/erros_blog.svg';
 
-const SectionBlog = () => {
+const Blog = () => {
 
     const infoCards = [
         {
@@ -51,4 +51,4 @@ const SectionBlog = () => {
     )
 }
 
-export default SectionBlog
+export default Blog
