@@ -1,50 +1,5 @@
+
 .containerSlider {
     height: calc(100vh - 154px);
     position: relative;
-}
-
-.containerSlider > img {
-    width: 100%;
-}
-
-.containerTextBanner {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.contentBanner {
-    max-width: 34rem;
-    color: #fff;
-}
-
-.decoratedText {
-    font-family: "Mrs Saint Delafield", cursive;
-    font-size: 3rem;
-    margin-bottom: -2.5rem;
-    color: #e2b093;
-}
-
-.titleBanner {
-    font-size: 5rem;
-    font-weight: bold;
-}
-
-.subTitleBanner {
-    font-weight: bold;
-}
-
-.textBanner {
-    margin-top: 1rem;
-    width: 100%;
-    color: #ddd;
-}
-
-.btnIcon {
-    width: 2rem;
-    height: 2rem;
 }

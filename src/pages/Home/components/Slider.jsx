@@ -1,16 +1,16 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { FaWhatsapp } from "react-icons/fa";
+import Slide from './Slide';
 import Button from '../../../components/Button';
 import openWhatsapp from '../../../utils/openWhatsapp';
+import style from './Slider.module.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import style from './Slider.module.css';
 
-
-import slideDesktop1 from '../images/banner-desktop1.jpg'
-import slideDesktop2 from '../images/banner-desktop2.jpg'
+import HeroBackground from '../images/hero-background.jpg'
+import BannerDesktop2 from '../images/banner-desktop2.jpg'
+import BannerDesktop3 from '../images/banner-desktop3.jpg'
 
 const Slider = () => {
     const styleSwiper = {
@@ -20,44 +20,51 @@ const Slider = () => {
         '--swiper-pagination-bullet-horizontal-gap': '8px',
     }
 
+    const contentSlides = [
+        {
+            id: 1,
+            background: HeroBackground,
+            title: "HAIR STYLIST",
+            subTitle: "SEU CABELO NAS MÃOS DE QUEM ENTENDE",
+            decoratedText: "Camilla Sousa",
+            description: "Transforme seu visual com a ajuda de uma especialista! Agende seu horário agora e tenha uma experiência única de cuidados para o seu cabelo.",
+            button: <Button text="Agendar agora" variant='hero' action={openWhatsapp} />,
+        },
+        {
+            id: 2,
+            background: BannerDesktop3,
+            title: "PREMIUM",
+            subTitle: "UTILIZAMOS OS MELHORES PRODUTOS DO MERCADO",
+            decoratedText: "Produtos",
+            description: "Priorizamos a qualidade e os melhores resultados para os seus cabelos. Por isso, trabalhamos exclusivamente com as marcas mais renomadas do mercado: Joico, Wella e Truss. Confie no cuidado que você merece!",
+            variantContent: "left"
+        },
+    ]
+
     return (
         <Swiper
             style={styleSwiper}
             modules={[Navigation, Pagination, Autoplay]}
             pagination={{ clickable: false }}
-            autoplay={true}
+            autoplay={false}
             className={style.mySwiper}
         >
-            <SwiperSlide>
-                <div className={style.containerSlider}>
-                    <img src={slideDesktop1} className={style.imgDesktop} />
-                    <div className={style.containerTextBanner}>
-                        <div className="container">
-                            <div className={style.contentBanner}>
-                                <p className={style.decoratedText}>
-                                    Camilla Sousa
-                                </p>
-                                <p className={style.titleBanner}>
-                                    HAIR STYLIST
-                                </p>
-                                <p className={style.subTitleBanner}>
-                                    ANOS DE EXPERIÊNCIA
-                                </p>
-                                <p className={style.textBanner}>
-                                    Transforme seu visual com a ajuda de uma especialista! Agende seu horário agora e tenha uma experiência única de cuidados para o seu cabelo.
-                                </p>
-                                <Button text="Agendar agora" icon={<FaWhatsapp />} marginTop='2rem' action={openWhatsapp} />
-                            </div>
-                        </div>
+            {contentSlides.map((slide) => (
+                <SwiperSlide>
+                    <div className={style.containerSlider}>
+                        <Slide
+                            key={slide.id}
+                            backgroundImage={slide.background}
+                            title={slide.title}
+                            subTitle={slide.subTitle}
+                            decoratedText={slide.decoratedText}
+                            description={slide.description}
+                            button={slide.button}
+                            variantContent={slide.variantContent}
+                        />
                     </div>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className={style.containerSlider}>
-                    <img src={slideDesktop2} className={style.imgDesktop} />
-                    
-                </div>
-            </SwiperSlide>
+                </SwiperSlide>
+            ))}
         </Swiper>
     )
 }
