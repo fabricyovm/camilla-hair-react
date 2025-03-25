@@ -5,7 +5,7 @@
 
 .title::after {
     content: '';
-    width: 60%;
+    width: 60%;    
     height: 2px;
     background-color: #A68C4C;
     position: absolute;

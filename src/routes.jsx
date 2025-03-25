@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -10,8 +9,7 @@ import TesteDeMecha from './pages/Blog/TesteDeMecha';
 
 function AppRoutes() {
     return (
-        <BrowserRouter>
-            <ScrollToTop />
+        <BrowserRouter>            
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route path="/" element={<Home />}></Route>

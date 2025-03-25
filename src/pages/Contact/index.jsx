@@ -4,7 +4,7 @@ import ProfilePicture from '../../assets/profile-picture.jpeg';
 import { FaUser } from "react-icons/fa";
 import InstagramIcon from '../../assets/instagram-icon.svg';
 import openWhatsapp from '../../utils/openWhatsapp';
-import ButtonWhatsapp from '../../components/ButtonWhatsapp';
+import Button from '../../components/Button';
 import { FaLocationDot } from "react-icons/fa6";
 import { FaWhatsapp, FaRegClock, FaPhoneAlt } from "react-icons/fa";
 
@@ -51,7 +51,6 @@ const Contact = () => {
               />
             ))}
           </ul>    
-          <ButtonWhatsapp text="Agendar agora" action={openWhatsapp} position="center" />
         </div>
 
         <div className={style.boxAbout}>

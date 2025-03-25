@@ -1,5 +1,12 @@
 
 .containerSlider {
-    height: calc(100vh - 154px);
+    height: calc(100dvh - 154px);
     position: relative;
+    user-select: none;
+}
+
+@media (max-width: 480px) {
+    .containerSlider {
+        height: calc(100dvh - 80px);
+    }
 }

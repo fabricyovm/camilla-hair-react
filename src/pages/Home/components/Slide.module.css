@@ -3,40 +3,40 @@
     height: 100%;
     display: flex;
     align-items: center;
-    position: absolute;    
+    position: absolute;
     top: 0;
-    left: 0;    
+    left: 0;
 }
 
 .backgroundImage {
-    width: 100%;
+    width: 100%;    
 }
 
 .slideContent {
     width: 100%;
 }
 
-.boxBanner {  
+.boxBanner {
     color: #fff;
-    margin: 0 auto;      
+    margin: 0 auto;
 }
 
 .center,
 .left,
 .right {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 }
 
 .center > p,
-.left  > p,
-.right  > p {
-    max-width: 32.5rem;  
+.left > p,
+.right > p {
+    max-width: 32.5rem;
 }
 
 .center {
     align-items: center;
-    text-align: center;              
+    text-align: center;
 }
 
 .left {
@@ -57,7 +57,7 @@
 }
 
 .titleBanner {
-    font-size: 5rem;
+    font-size: clamp(2rem, 2rem + 5vw, 5rem);
     font-weight: bold;
     color: #fff;
     white-space: nowrap;
@@ -71,4 +71,19 @@
     margin-top: 1rem;
     width: 100%;
     color: #ddd;
+}
+
+@media (max-width: 480px) {
+
+    .center>p,
+    .left>p,
+    .right>p {
+        max-width: 100%;
+    }
+
+    .boxBanner > * {
+        text-align: left;
+        margin-left: 0;
+    }
+
 }

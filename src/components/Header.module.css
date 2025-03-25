@@ -1,9 +1,10 @@
 .header {  
     background-color: #000;
+    min-height: 80px;
 }
 
 .headerContent {
-    padding: 10px;
+    padding: 10px 0;
     transition: 0.4s;
 }
 
@@ -12,7 +13,7 @@
     justify-content: center;
     gap: 60px;
     list-style: none;   
-    user-select: none;
+    user-select: none;    
 }
 
 .itemList {
@@ -24,6 +25,7 @@
 }
 
 .linkList {
+    display: block;
     color: #8f8f8f;
 }
 
@@ -37,4 +39,100 @@
 
 .linkList.activePage {
     color: #fff;
+}
+
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;    
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menuMobile > span {
+    width: 100%;
+    height: 4px;
+    border-radius: 2rem;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.closeMenuMobile {
+    display: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.btnCloseMenuMobile {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btnCloseMenuMobile > * {
+    fill: #fff;
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 480px) {
+    .menuMobile {
+        display: flex;
+    }
+
+    .closeMenuMobile {
+        display: block;
+    }
+
+    .headerContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navList {        
+        flex-direction: column;
+        justify-content: start;
+        gap: 0;
+        width: 70%;
+        height: 100dvh;
+        padding: 2rem 1rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #080808;
+        z-index: 1000;
+        border-left: 2px solid #b49759;
+        transform: translateX(110%);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .nav > .navList::before {
+        content: '';
+        width: 0;
+        height: 100%;
+        background: linear-gradient(to left, #080808, transparent);
+        position: absolute;
+        left: -1px;
+        top: 0;
+        transform: translateX(0%);
+        transition: width 0.2s;
+        transition-delay: 0.1s;
+    }
+
+    .nav.active > .navList::before {
+        width: calc(100vw - 70%);
+        transform: translateX(-100%);
+    }
+
+    .nav.active > .navList {
+        transform: translateX(0);
+    }
+
+    .navList > li:not(:first-child) {
+        border-bottom: 1px solid #b49759;
+        border-radius: 0;
+    }    
 }

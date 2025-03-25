@@ -1,29 +1,44 @@
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import Slide from './Slide';
-import Button from '../../../components/Button';
+import Button from '../../../components/Button'
 import openWhatsapp from '../../../utils/openWhatsapp';
+import Slide from './Slide';
 import style from './Slider.module.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import HeroBackground from '../images/hero-background.jpg'
+import HeroBackgroundMobile from '../images/hero-background-mobile.jpg'
 import BannerDesktop2 from '../images/banner-desktop2.jpg'
 import BannerDesktop3 from '../images/banner-desktop3.jpg'
+import BannerMobile3 from '../images/banner-mobile3.jpg'
 
 const Slider = () => {
-    const styleSwiper = {
-        '--swiper-pagination-color': '#000',
-        '--swiper-pagination-bottom': '10px',
-        '--swiper-pagination-bullet-size': '10px',
-        '--swiper-pagination-bullet-horizontal-gap': '8px',
-    }
+    const [isBannerMobile, setIsBannerMobile] = useState(false)
+
+    useEffect(() => {
+        const handleSize = () => {
+            if(window.innerWidth <= 480) {
+                setIsBannerMobile(true)
+            }
+            else {
+                setIsBannerMobile(false)
+            }
+        }
+
+        handleSize()
+
+        window.addEventListener('resize', handleSize)
+
+        return () => window.removeEventListener('resize', handleSize)
+    }, [])
 
     const contentSlides = [
         {
             id: 1,
-            background: HeroBackground,
+            background: isBannerMobile ? HeroBackgroundMobile : HeroBackground,
             title: "HAIR STYLIST",
             subTitle: "SEU CABELO NAS MÃOS DE QUEM ENTENDE",
             decoratedText: "Camilla Sousa",
@@ -32,7 +47,7 @@ const Slider = () => {
         },
         {
             id: 2,
-            background: BannerDesktop3,
+            background: isBannerMobile ? BannerMobile3 : BannerDesktop3,
             title: "PREMIUM",
             subTitle: "UTILIZAMOS OS MELHORES PRODUTOS DO MERCADO",
             decoratedText: "Produtos",
@@ -42,10 +57,8 @@ const Slider = () => {
     ]
 
     return (
-        <Swiper
-            style={styleSwiper}
-            modules={[Navigation, Pagination, Autoplay]}
-            pagination={{ clickable: false }}
+        <Swiper            
+            modules={[Navigation, Pagination, Autoplay]}            
             autoplay={false}
             className={style.mySwiper}
         >

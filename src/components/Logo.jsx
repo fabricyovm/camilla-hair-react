@@ -1,8 +1,8 @@
 import style from './Logo.module.css'
 
-const Logo = () => {
+const Logo = ({ variant = "header" }) => {
     return (
-        <h1 className={style.logoTitle}>
+        <h1 className={`${style.logoTitle} ${style[variant]}`}>
             Camilla Sousa
         </h1>
     )

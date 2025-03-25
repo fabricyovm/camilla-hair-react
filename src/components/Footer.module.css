@@ -113,7 +113,8 @@
     }
 
     .services > :first-child {
-        grid-column: 1 / -1;
+        grid-column: 1 / -1;  
+        max-width: 30%;      
     }
 }
 

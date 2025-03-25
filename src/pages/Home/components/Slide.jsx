@@ -1,5 +1,4 @@
 import style from './Slide.module.css'
-import openWhatsapp from '../../../utils/openWhatsapp';
 
 const Slide = ({
     backgroundImage,

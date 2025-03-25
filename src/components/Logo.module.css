@@ -1,7 +1,10 @@
 .logoTitle {
     color: #b49759; 
-    text-align: center;
     font-family: "Great Vibes", cursive;
-    font-weight: 100;
-    font-size: 70px;        
+    font-weight: 100;     
+}
+
+.logoTitle.header {
+    font-size: clamp(40px, 10vw, 70px);
+    text-align: center;
 }
