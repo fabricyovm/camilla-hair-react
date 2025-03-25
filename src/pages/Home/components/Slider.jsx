@@ -11,7 +11,6 @@ import 'swiper/css/pagination';
 
 import HeroBackground from '../images/hero-background.jpg'
 import HeroBackgroundMobile from '../images/hero-background-mobile.jpg'
-import BannerDesktop2 from '../images/banner-desktop2.jpg'
 import BannerDesktop3 from '../images/banner-desktop3.jpg'
 import BannerMobile3 from '../images/banner-mobile3.jpg'
 
@@ -42,7 +41,7 @@ const Slider = () => {
             title: "HAIR STYLIST",
             subTitle: "SEU CABELO NAS MÃOS DE QUEM ENTENDE",
             decoratedText: "Camilla Sousa",
-            description: "Transforme seu visual com a ajuda de uma especialista! Agende seu horário agora e tenha uma experiência única de cuidados para o seu cabelo.",
+            description: "Agende seu horário agora e tenha uma experiência única de cuidados para o seu cabelo.",
             button: <Button text="Agendar agora" variant='hero' action={openWhatsapp} />,
         },
         {
