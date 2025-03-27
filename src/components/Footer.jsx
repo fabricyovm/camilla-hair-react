@@ -70,7 +70,7 @@ const Footer = () => {
 
             <div className={style.copyright}>
                 <p>
-                    © Camila Sousa, 2025 - Todos os direitos reservados. | <a href="https://portfolio-fabricyo-mattivi.vercel.app" target="_blank">Desenvolvido por Fabricyo Vargas Mattivi.</a>
+                    © Camila Sousa, 2025 - Todos os direitos reservados. | <a href="https://fabricyomattivi.vercel.app" target="_blank">Desenvolvido por Fabricyo Vargas Mattivi.</a>
                 </p>
             </div>
         </footer>
