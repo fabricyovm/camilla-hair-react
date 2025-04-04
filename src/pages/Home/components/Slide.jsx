@@ -7,11 +7,12 @@ const Slide = ({
     decoratedText,
     description,
     button,
-    variantContent = "center"
+    variantContent = "center",
+    altText = "Camilla Sousa, Hair Stylist. Agende seu horário."
 }) => {
     return (
         <>
-            <img src={backgroundImage} className={style.backgroundImage} />
+            <img src={backgroundImage} className={style.backgroundImage} alt={altText} />
             <div className={style.containerTextBanner}>
                 <div className={`container ${style.slideContent}`}>
                     <div className={`${style.boxBanner} ${style[variantContent]}`}>

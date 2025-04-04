@@ -27,7 +27,7 @@ const ToTop = () => {
     }, [])
 
   return toTop && (
-    <button className={style.toTop} onClick={toTopNow}>        
+    <button className={style.toTop} onClick={toTopNow} aria-label="Voltar ao topo">        
         <IoIosArrowUp className={style.iconToTop} />
     </button>
   )

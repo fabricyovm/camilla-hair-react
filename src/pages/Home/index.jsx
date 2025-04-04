@@ -1,9 +1,9 @@
-import Slider from './components/Slider';
-import Services from './components/Services';
-import Blog from './components/Blog';
-import Differentials from './components/Differentials';
-import ToTop from '../../components/ToTop';
-
+import Slider from './components/Slider'
+import Services from './components/Services'
+import Testimonials from './components/Testimonials'
+import Blog from './components/Blog'
+import Differentials from './components/Differentials'
+import ToTop from '../../components/ToTop'
 
 const Home = () => {
 
@@ -11,9 +11,10 @@ const Home = () => {
     <>
       <Slider />
       <Services />
+      <Testimonials />
       <Differentials />
       <Blog />
-      <ToTop />
+      <ToTop />      
     </>
   )
 }

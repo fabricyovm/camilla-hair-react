@@ -1,22 +1,13 @@
-import style from './Title.module.css';
+import style from './Title.module.css'
 
 const Title = ({ 
   title, 
-  fontSize = '1.5rem', 
-  color = '#b49759',
-  marginBottom = '0',
- }) => {
-
-  const titleStyle = {
-      color,
-      fontSize,
-      marginBottom,
-  }
-
+  variant = "sectionLeft"
+}) => {
   return (
-      <h1 className={style.title} style={titleStyle}>
-        {title}
-      </h1>
+    <div className={`${style.boxTitle} ${style[variant]}`}>
+        <h1 className={style.title}>{title}</h1>
+    </div>
   )
 }
 

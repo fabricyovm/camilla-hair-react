@@ -1,14 +1,15 @@
-import Title from "./Title";
+import { FaLocationDot } from "react-icons/fa6"
+import { FaWhatsapp, FaInstagram, FaRegClock, FaPhoneAlt } from "react-icons/fa"
+import Title from "./Title"
 import style from './Footer.module.css'
-import { FaLocationDot } from "react-icons/fa6";
-import { FaWhatsapp, FaInstagram, FaRegClock, FaPhoneAlt } from "react-icons/fa";
+
 
 const Footer = () => {
     return (
         <footer className={style.footer}>
             <div className={`container ${style.footerContent}`}>
                 <div className={style.camilaSousa}>
-                    <Title title="CAMILA SOUSA" fontSize="1.2rem" marginBottom="2rem" />
+                    <Title title="CAMILA SOUSA" variant="footer" />
                     <p>
                         Com anos de experiência no mundo da beleza, sou uma cabeleireira profissional dedicada a transformar e realçar a beleza de cada cliente. Minha trajetória na profissão é marcada pela dedicação e pelo desejo de proporcionar resultados que superem as expectativas.
                     </p>
@@ -30,7 +31,7 @@ const Footer = () => {
                 </div>
 
                 <div className={style.services}>
-                    <Title title="SERVIÇOS" fontSize="1.2rem" marginBottom="2rem" />
+                    <Title title="SERVIÇOS" variant="footer" />
                     <p>Corte</p>
                     <p>Mechas</p>
                     <p>Luzes</p>
@@ -44,7 +45,7 @@ const Footer = () => {
                 </div>
 
                 <div className={style.contact}>
-                    <Title title="CONTATO" fontSize="1.2rem" marginBottom="2rem" />
+                    <Title title="CONTATO" variant="footer" />
                     <p>
                         <FaWhatsapp className={style.iconFooter} />
                         <span>(51) 99408-2005</span>
@@ -60,7 +61,7 @@ const Footer = () => {
                 </div>
 
                 <div className={style.serviceHours}>
-                    <Title title="ATENDIMENTO" fontSize="1.2rem" marginBottom="2rem" />
+                    <Title title="ATENDIMENTO" variant="footer" />
                     <p>
                         <FaRegClock className={style.iconFooter} />
                         <span>De <b>terça-feira</b> a <b>sábado</b>, das <b>10h</b> às <b>19h</b></span>

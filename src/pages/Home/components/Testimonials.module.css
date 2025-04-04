@@ -1,0 +1,61 @@
+.testimonials {
+    padding: 4rem 0;
+}
+
+.testimonialsBox {
+    height: 250px;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nameClient {
+    color: #e2b093;
+    font-size: 1.5rem;
+}
+
+.infoClient > span {
+    color: #888;
+    font-size: 0.875rem;
+}
+
+.text {
+    color: #424242;
+    margin-top: 1.5rem;
+}
+
+.starIcon {
+    margin-right: 0.2rem;
+    color: #FFDD44;
+}
+
+.navigationButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.btnNext,
+.btnPrev {
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+    color: #e2b093;
+    cursor: pointer;
+}
+
+.btnNext.transparent,
+.btnPrev.transparent {
+    opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+    .btnNext,
+    .btnPrev {
+        font-size: 3rem;        
+    }
+}

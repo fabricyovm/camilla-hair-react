@@ -1,36 +1,27 @@
-.container {
-    width: 100%;     
-    display: flex;
+.contact {
+    padding: 2rem 0;
 }
 
-.boxContact,
-.boxAbout {       
-    background-color: #eee; 
+.contactContent {
+    display: flex;    
+}
+
+.boxLeftSide,
+.boxRightSide {
     flex: 1;
 }
 
-.boxAbout {  
-    background: rgb(184, 73, 125);
+.boxRightSide {
+    text-align: center;
+    background-color: #ddd;
+    padding: 4rem 0;
 }
 
-.boxContact {
-    font-size: 1rem;
+.listContact {
+    max-width: 90%;
 }
 
-.boxContact h1 {
-    color: #8c1366;
-    font-size: 4rem;
-    font-weight: 300;
-    text-align: center;  
-    margin: 1rem 0; 
-}
-
-.boxContact ul {
-    margin: 0 auto;
-    width: 70%;
-}
-
-.boxAbout .tempProfilePicture {
+.tempProfilePicture {
     display: flex;
     margin: 0 auto;
     justify-content: center;
@@ -38,105 +29,90 @@
     width: 12rem;
     height: 12rem; 
     justify-content: center;
-    background-color: #ccc;
+    background-color: #aaa;
     border-radius: 50%;
     padding: 2rem;
 }
 
-.boxAbout .tempProfilePicture .tempIconProfilePicture {
+.tempProfilePicture .tempIconProfilePicture {
     width: 100%;
     height: 100%;  
     color: #ddd;  
 }
 
-.boxAbout .aboutContent {
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem 0;
-}
-
-.boxAbout .aboutContent > img {
-    display: block;
-    max-width: 14rem;
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.boxAbout .aboutContent h1 {
-    text-align: center;
-    color: #eee;
+.professionalName {
+    color: #b49759;
     font-size: 3rem;
     font-weight: 400;
     margin-top: 0.5rem;
     white-space: nowrap;
 }
 
-.boxAbout .aboutContent p.specialtiesText {
-    color: #eee;
+.specialtiesText {
+    color: #424242;
     font-size: 1.5rem;
-    text-align: center;
-    font-weight: 300;
     margin-bottom: 4rem;
 }
 
-.boxAbout .aboutContent p.followInstagram {
-    color: #eee;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 3rem;
-}
-
-.mediaSocial .boxIcon {
-    width: 5rem;
-    height: 5rem;
-    background-color: #fff;
-    display: flex;
+.instagram {
+    display: flex;     
     justify-content: center;
+    font-size: 1rem;
+}
+
+.instagramContent {
+    display: flex;
     align-items: center;
-    border-radius: 50%;
-    margin: 1rem auto;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 2em;
+    color: #fff;
+    background: linear-gradient(90deg, #b49759, #c5a879, #b49759);
+    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.25);
+    transition: opacity 0.2s;
 }
 
-.boxIcon > img {
-    display: block;
-    width: 3rem;
-    background-color: #eee;  
+.instagramContent > span {
+    font-size: 1em;
 }
 
-.mediaSocial > p {
-    text-align: center;
-    color: #eee;
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: 300;
+.instagramContent:hover {
+    opacity: 0.8;
 }
 
-.mediaSocial p.instagram {  
-    max-width: 22rem;  
-    border-radius: 2rem;  
-    background-color: #eee;
-    padding: 0.5rem;    
-    font-size: 2rem;
-    color: #8c1366;
-    font-weight: bold;
-    margin: 0.5rem auto;  
+.iconInstagram {
+    width: 1.5em;
+    height: 1.5em;
 }
 
-
-@media screen and (max-width: 768px) {
-    .container {
+@media screen and (max-width: 480px) {
+    .contactContent {
         flex-direction: column;
+        gap: 4rem;
     }
 
-    .boxContact ul {
+    .listContact {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+
+    .professionalName {
+        font-size: 2.5rem;
+    }
+
+    .specialtiesText {
+        font-size: 1.4rem;
+    }
+
+    .instagram {
+        font-size: 0.8em;
+    }
+
+    .instagramContent {
         width: 90%;
+        height: 5rem;
+        padding: 0.5rem;
+        gap: 0.4rem;
     }
 }
-
-@media screen and (max-width: 360px) {
-    .mediaSocial p.instagram {
-        font-size: 1.5rem;
-    }
-}
-

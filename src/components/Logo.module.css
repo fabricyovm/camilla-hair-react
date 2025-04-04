@@ -5,6 +5,6 @@
 }
 
 .logoTitle.header {
-    font-size: clamp(40px, 10vw, 70px);
+    font-size: clamp(45px, 10vw, 70px);
     text-align: center;
 }
