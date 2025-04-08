@@ -16,30 +16,30 @@ const Testimonials = () => {
         {
             id: 1,
             avatar: "",
-            name: "Fabricyo Mattivi",
-            infoClient: "Cliente e Namorado",
-            testimonial: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit excepturi dolores, consequuntur ullam quibusdam earum vel harum rem deserunt. Aut inventore quo laudantium, alias odit velit quis neque. Veniam, quas?"
+            name: "Renata Lima",
+            infoClient: "Cliente",
+            testimonial: "Sempre tive receio de mudar o corte, mas ela me passou tanta confiança que resolvi tentar... e amei! O atendimento é super acolhedor, ela escuta com atenção e dá sugestões que combinam com nosso estilo. Saí me sentindo renovada. Recomendo demais!"
         },
         {
             id: 2,
             avatar: "",
-            name: "Adriana Vargas",
-            infoClient: "Cliente e Sogra",
-            testimonial: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit excepturi dolores, consequuntur ullam quibusdam earum vel harum rem deserunt. Aut inventore quo laudantium, alias odit velit quis neque. Veniam, quas?"
+            name: "Juliana Mello",
+            infoClient: "Cliente",
+            testimonial: "Fiz uma hidratação profunda e escova, e meu cabelo nunca ficou tão leve e brilhoso. O ambiente é super calmo, organizado e confortável. Dá pra perceber que tudo é feito com muito amor. Com certeza virei cliente fiel!"
         },
         {
             id: 3,
             avatar: "",
             name: "Susi Ribas",
             infoClient: "Cliente e Influencer Digital",
-            testimonial: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit excepturi dolores, consequuntur ullam quibusdam earum vel harum rem deserunt. Aut inventore quo laudantium, alias odit velit quis neque. Veniam, quas?"
+            testimonial: "Fui indicada por uma amiga e agora sou eu quem indica! O atendimento é diferenciado, ela entende o que você quer e ainda propõe melhorias com muito bom gosto. Meu cabelo ficou incrível, e ainda saí mais leve de tanto que a conversa foi boa."
         },
         {
             id: 4,
             avatar: "",
-            name: "Maria Da Rosa",
+            name: "Bianca Ferreira",
             infoClient: "Cliente",
-            testimonial: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit excepturi dolores, consequuntur ullam quibusdam earum vel harum rem deserunt. Aut inventore quo laudantium, alias odit velit quis neque. Veniam, quas?"
+            testimonial: "O serviço é de alta qualidade, mas o diferencial está no cuidado humano. Ela te trata como única, sem pressa, com muito profissionalismo e carinho. O resultado fala por si: um cabelo lindo e uma cliente feliz."
         },
     ]
 

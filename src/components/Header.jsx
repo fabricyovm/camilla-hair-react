@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { IoClose } from "react-icons/io5";
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { FaHome, FaPhone, FaImages } from "react-icons/fa"
+import { MdContentCut } from "react-icons/md"
 import Logo from '../components/Logo'
-import style from './Header.module.css';
+import style from './Header.module.css'
 
 const Header = () => {
     const { pathname } = useLocation();
@@ -10,19 +11,23 @@ const Header = () => {
     const navElements = [
         {
             path: '/',
-            pageName: 'Home'
+            pageName: 'Início',
+            iconmobile: <FaHome className={style.iconMobile} />,
         },
         {
             path: '/services',
-            pageName: 'Serviços'
+            pageName: 'Serviços',
+            iconmobile: <MdContentCut className={style.iconMobile} />,
         },
         {
             path: '/products',
-            pageName: 'Produtos'
+            pageName: 'Produtos',
+            iconmobile: <FaImages className={style.iconMobile} />,
         },
         {
             path: '/contact',
-            pageName: 'Contato'
+            pageName: 'Contato',
+            iconmobile: <FaPhone className={style.iconMobile} />,
         },
     ]
 
@@ -32,6 +37,19 @@ const Header = () => {
         setIsMenuMobile(!isMenuMobile)
     }
 
+    useEffect(() => {
+        if (isMenuMobile) {
+            document.body.style.overflow = 'hidden';
+        } 
+        else {
+            document.body.style.overflow = 'auto';
+        }
+        
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [isMenuMobile]);
+
     return (
         <header className={style.header}>
             <div className={`container ${style.headerContent}`}>
@@ -40,14 +58,10 @@ const Header = () => {
                 </Link>
                 <nav className={`${style.nav} ${isMenuMobile ? style['active'] : ''}`}>
                     <ul className={style.navList}>
-                        <li className={`${style.closeMenuMobile}`} onClick={toggleMenu}>
-                            <button className={style.btnCloseMenuMobile}>
-                                <IoClose />
-                            </button>
-                        </li>
                         {navElements.map(element => (
                             <li key={element.path} className={style.itemList} onClick={toggleMenu}>
                                 <Link to={element.path} className={`${style.linkList} ${isActivePage(element.path)}`}>
+                                    {element.iconmobile}
                                     {element.pageName}
                                 </Link>
                             </li>

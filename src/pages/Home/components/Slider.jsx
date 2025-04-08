@@ -42,7 +42,8 @@ const Slider = () => {
             decoratedText: "Camilla Sousa",
             description: "Agende seu horário agora e tenha uma experiência única de cuidados para o seu cabelo.",
             button: <Button text="Agendar agora" variant='hero' action={openWhatsapp} />,
-            altText: "Camilla Sousa, Hair Stylist. Agende seu horário."
+            altText: "Camilla Sousa, Hair Stylist. Agende seu horário.",
+            variant: "textCenter"
         },
         {
             id: 2,
@@ -51,22 +52,21 @@ const Slider = () => {
             subTitle: "UTILIZAMOS OS MELHORES PRODUTOS DO MERCADO",
             decoratedText: "Produtos",
             description: "Priorizamos a qualidade e os melhores resultados para os seus cabelos. Por isso, trabalhamos exclusivamente com as marcas mais renomadas do mercado: Joico, Wella e Truss. Confie no cuidado que você merece!",
-            variantContent: "left",
-            altText: "Banner com o título PREMIUM e uma descrição 'Utilizamos os melhores produtos do mercado como Joico, Wella e Truss.'"
+            altText: "Banner com o título PREMIUM e uma descrição 'Utilizamos os melhores produtos do mercado como Joico, Wella e Truss.'",
+            variant: "textLeft"
         },
     ]
 
     return (
         <Swiper        
             modules={[Navigation, Pagination, Autoplay]}     
-            autoplay={{
-                delay: 5000,
-            }}            
+            // autoplay={{
+            //     delay: 5000,
+            // }}            
             className={style.mySwiper}
         >
             {contentSlides.map((slide) => (
-                <SwiperSlide key={slide.id}>
-                    <div className={style.containerSlider}>
+                <SwiperSlide key={slide.id}>             
                         <Slide                            
                             backgroundImage={slide.background}
                             title={slide.title}
@@ -76,8 +76,8 @@ const Slider = () => {
                             button={slide.button}
                             variantContent={slide.variantContent}
                             altText={slide.altText}
-                        />
-                    </div>
+                            variant={slide.variant}
+                        />              
                 </SwiperSlide>
             ))}
         </Swiper>

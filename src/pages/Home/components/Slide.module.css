@@ -1,62 +1,41 @@
-.containerTextBanner {
+ .containerSlide {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
+    position: relative;
+ }
+
+ .backgroundImage {
+    width: 100%;
+ }
+
+ .containerContent {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
-}
+    left: 0; 
+ }
 
-.backgroundImage {
-    width: 100%;    
-}
+ .textContent {
+    display: flex;
+    height: 100%;
+    align-items: center;   
+ }
 
-.slideContent {
-    width: 100%;
-}
-
-.boxBanner {
-    color: #fff;
-    margin: 0 auto;
-}
-
-.center,
-.left,
-.right {
+ .boxText {
     display: flex;
     flex-direction: column;
-}
+    max-width: 520px;
+ }
 
-.center > p,
-.left > p,
-.right > p {
-    max-width: 32.5rem;
-}
-
-.center {
-    align-items: center;
-    text-align: center;
-}
-
-.left {
-    align-items: start;
-    text-align: left;
-}
-
-.right {
-    align-items: end;
-    text-align: right;
-}
-
-.decoratedText {
+ .decoratedText {
     font-family: "Mrs Saint Delafield", cursive;
     font-size: 3rem;
     margin-bottom: -2.5rem;
     color: #e2b093;
 }
 
-.titleBanner {
+.titleBanner {   
     font-size: clamp(2rem, 2rem + 5vw, 5rem);
     font-weight: bold;
     color: #fff;
@@ -65,6 +44,7 @@
 
 .subTitleBanner {
     font-weight: bold;
+    color: #ddd;
 }
 
 .description {
@@ -73,17 +53,25 @@
     color: #ddd;
 }
 
-@media (max-width: 480px) {
+/* Variant textCenter */
 
-    .center>p,
-    .left>p,
-    .right>p {
-        max-width: 100%;
-    }
+ .textContent.textCenter {
+    justify-content: center;
+ }
 
-    .boxBanner > * {
-        text-align: left;
-        margin-left: 0;
-    }
+ .textContent.textCenter .boxText {
+    align-items: center;
+ }
 
-}
+ .textContent.textCenter .decoratedText,
+ .textContent.textCenter .titleBanner,
+ .textContent.textCenter .subTitleBanner,
+ .textContent.textCenter .description {
+    text-align: center;
+ }  
+
+ /* Variant textLeft */
+
+ .textContent.textLeft {
+    justify-content: start;
+ }

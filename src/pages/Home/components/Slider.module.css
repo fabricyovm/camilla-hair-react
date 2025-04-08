@@ -1,12 +1,12 @@
 
-.containerSlider {
+.mySwiper {
     height: calc(100dvh - 154px);
+    max-height: 800px;
     position: relative;
-    user-select: none;
 }
 
 @media (max-width: 480px) {
-    .containerSlider {
+    .mySwiper {
         height: calc(100dvh - 80px);
     }
 }
