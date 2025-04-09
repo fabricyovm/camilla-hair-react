@@ -36,20 +36,7 @@ const Header = () => {
     const toggleMenu = () => {
         setIsMenuMobile(!isMenuMobile)
     }
-
-    useEffect(() => {
-        if (isMenuMobile) {
-            document.body.style.overflow = 'hidden';
-        } 
-        else {
-            document.body.style.overflow = 'auto';
-        }
-        
-        return () => {
-            document.body.style.overflow = 'auto';
-        };
-    }, [isMenuMobile]);
-
+    
     return (
         <header className={style.header}>
             <div className={`container ${style.headerContent}`}>
