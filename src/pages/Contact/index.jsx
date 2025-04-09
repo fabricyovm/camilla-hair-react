@@ -4,8 +4,6 @@ import ToTop from '../../components/ToTop'
 import ContactInfoItem from './components/ContactInfoItem';
 import Maps from './components/Maps'
 import style from './index.module.css';
-import openWhatsapp from '../../utils/openWhatsapp';
-import Button from '../../components/Button';
 import Title from "../../components/Title";
 
 
@@ -43,8 +41,7 @@ const Contact = () => {
         <Title title="Contato" />
       </div>
       <div className={`container ${style.contactContent}`}>
-        <div className={style.boxLeftSide}>
-          {/* <Title title="CONTATO"  marginBottom="2rem" /> */}          
+        <div className={style.boxLeftSide}>        
           <ul className={style.listContact}>
             {contactInfo.map((item) => (
               <ContactInfoItem
@@ -57,24 +54,9 @@ const Contact = () => {
           </ul>
         </div>
         <div className={style.boxRightSide}>
-          <div className={style.aboutContent}>
-            <div className={style.tempProfilePicture}>
-              <FaUser className={style.tempIconProfilePicture} />
-            </div>
-            <h1 className={style.professionalName}>Camila Sousa</h1>
-            <p className={style.specialtiesText}>
-              Especialista em mechas, coloração, corte e química capilar
-            </p>
-            <a className={style.instagram} href="https://www.instagram.com/camilla.santoshair" target="_blank">
-              <div className={style.instagramContent}>
-                <FaInstagram className={style.iconInstagram} />
-                <span>camillasantos.hair</span>
-              </div>
-            </a>           
-          </div>
+          <Maps />
         </div>        
       </div>
-      <Maps />
       <ToTop />
     </section>
   )

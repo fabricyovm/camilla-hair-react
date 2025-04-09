@@ -3,87 +3,13 @@
 }
 
 .contactContent {
-    display: flex;    
+    display: flex;  
+    gap: 4rem;  
 }
 
 .boxLeftSide,
 .boxRightSide {
     flex: 1;
-}
-
-.boxRightSide {
-    text-align: center;
-    background-color: #ddd;
-    padding: 4rem 0;
-}
-
-.listContact {
-    max-width: 90%;
-}
-
-.tempProfilePicture {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    width: 12rem;
-    height: 12rem; 
-    justify-content: center;
-    background-color: #aaa;
-    border-radius: 50%;
-    padding: 2rem;
-}
-
-.tempProfilePicture .tempIconProfilePicture {
-    width: 100%;
-    height: 100%;  
-    color: #ddd;  
-}
-
-.professionalName {
-    color: #b49759;
-    font-size: 3rem;
-    font-weight: 400;
-    margin-top: 0.5rem;
-    white-space: nowrap;
-}
-
-.specialtiesText {
-    color: #424242;
-    font-size: 1.5rem;
-    margin-bottom: 4rem;
-}
-
-.instagram {
-    display: flex;     
-    justify-content: center;
-    font-size: 1rem;
-}
-
-.instagramContent {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    font-size: 2em;
-    color: #fff;
-    background: linear-gradient(90deg, #b49759, #c5a879, #b49759);
-    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.25);
-    transition: opacity 0.2s;
-}
-
-.instagramContent > span {
-    font-size: 1em;
-}
-
-.instagramContent:hover {
-    opacity: 0.8;
-}
-
-.iconInstagram {
-    width: 1.5em;
-    height: 1.5em;
 }
 
 @media screen and (max-width: 480px) {
@@ -93,26 +19,7 @@
     }
 
     .listContact {
-        max-width: 100%;
+        width: 100%;
         margin-top: 2rem;
-    }
-
-    .professionalName {
-        font-size: 2.5rem;
-    }
-
-    .specialtiesText {
-        font-size: 1.4rem;
-    }
-
-    .instagram {
-        font-size: 0.8em;
-    }
-
-    .instagramContent {
-        width: 90%;
-        height: 5rem;
-        padding: 0.5rem;
-        gap: 0.4rem;
     }
 }
