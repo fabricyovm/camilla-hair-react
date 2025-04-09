@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { FaHome, FaPhone, FaImages } from "react-icons/fa"
 import { MdContentCut } from "react-icons/md"
@@ -40,9 +40,7 @@ const Header = () => {
     return (
         <header className={style.header}>
             <div className={`container ${style.headerContent}`}>
-                <Link to="/">
-                    <Logo variant='header' />
-                </Link>
+                <Logo variant='header' />
                 <nav className={`${style.nav} ${isMenuMobile ? style['active'] : ''}`}>
                     <ul className={style.navList}>
                         {navElements.map(element => (
